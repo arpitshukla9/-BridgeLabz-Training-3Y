@@ -54,7 +54,7 @@ public class FitnessCenterMembershipSystem {
             if (!cont.equalsIgnoreCase("yes")) {
                 keepRunning = false;
             }
-    
+
         } while (keepRunning);
 
         System.out.println("\nGym Closed. No more registrations.");

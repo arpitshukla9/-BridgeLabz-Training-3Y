@@ -1,4 +1,4 @@
-// gitpackage  27Aug;
+// package  27Aug;
 
 import java.util.Scanner;
 

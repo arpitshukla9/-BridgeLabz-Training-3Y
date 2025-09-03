@@ -19,7 +19,7 @@ public class CricketScoreAnalyzer {
         }
 
         int highest = runs[0];
-        int lowest = runs[0];  
+        int lowest = runs[0];
         int sum = 0;
 
         for (int i = 0; i < n; i++) {
