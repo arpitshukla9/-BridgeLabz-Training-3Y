@@ -1,0 +1,27 @@
+@startuml
+
+class Book {
+    - title : String
+    - author : String
+    + Book(title : String, author : String)
+    + getTitle() : String
+    + getAuthor() : String
+    + toString() : String
+}
+
+class Library {
+    - name : String
+    - books : List<Book>
+    + Library(name : String)
+    + addBook(book : Book) : void
+    + showBooks() : void
+}
+
+class AggregationDemo {
+    + main(args : String[]) : void
+}
+
+' Aggregation relationship
+Library o-- "0..*" Book : contains >
+
+@enduml

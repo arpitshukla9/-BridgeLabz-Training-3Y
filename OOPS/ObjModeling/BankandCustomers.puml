@@ -1,0 +1,31 @@
+@startuml 
+
+title Bank and Customer Association
+
+class Bank {
+  - name : String
+  - customers : List<Customer>
+  + openAccount(c : Customer, accountType : String) : Account
+}
+
+class Customer {
+  - name : String
+  - accounts : List<Account>
+  + viewBalance() : void
+}
+
+class Account {
+  - accountNumber : String
+  - balance : double
+  - type : String
+  + deposit(amount : double) : void
+  + withdraw(amount : double) : void
+  + getBalance() : double
+}
+
+' Relationships
+Bank "1" -- "0..*" Customer : has >
+Customer "1" -- "1..*" Account : owns >
+Account "1" -- "1" Bank : linked >
+
+@enduml
